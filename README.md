@@ -10,7 +10,7 @@ docker build -t simnibs-4.1.0 -f /path/to/dockerfile .
 ```
 docker images
 ```
-![image](https://github.com/user-attachments/assets/8c3e7531-88fd-4819-9297-51e9db41be25)
+![image](https://github.com/user-attachments/assets/0b523600-8bfb-472c-b349-c3fba48b78dc)
 
 
 ## 3. Run docker image
