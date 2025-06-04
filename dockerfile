@@ -7,15 +7,15 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Download and Install SimNIBS 4.1.0
-RUN wget https://github.com/simnibs/simnibs/releases/download/v4.1.0/simnibs_installer_linux.tar.gz -O /opt/simnibs_installer_linux.tar.gz && \
+# Download and Install SimNIBS 4.5.0
+RUN wget https://github.com/simnibs/simnibs/releases/download/v4.5.0/simnibs_installer_linux.tar.gz -O /opt/simnibs_installer_linux.tar.gz && \
     tar -xzf /opt/simnibs_installer_linux.tar.gz -C /opt/ && \
     rm /opt/simnibs_installer_linux.tar.gz && \
-    /opt/simnibs_installer/install -s -t /opt/SimNIBS-4.1.0 && \
+    /opt/simnibs_installer/install -s -t /opt/SimNIBS-4.5.0 && \
     rm -rf /opt/simnibs_installer
 
 # Set environment variable for SimNIBS binaries
-ENV SIMNIBS_BIN=/opt/SimNIBS-4.1.0/bin
+ENV SIMNIBS_BIN=/opt/SimNIBS-4.5.0/bin
 ENV PATH=$SIMNIBS_BIN:$PATH
 
 # Set the default command to run when the container starts
